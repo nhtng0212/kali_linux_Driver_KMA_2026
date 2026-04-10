@@ -62,7 +62,7 @@ static void mouse_irq_callback(struct urb *urb) {
     if (urb->status == 0) {
         current_data[0] = data[0]; // Byte 0: Buttons
 
-        // BỘ GIẢI MÃ BEKEN GAMING MOUSE (Dựa trên log thực tế)
+        // Giả mã chuột gaming/đời mới
         if (len >= 7) {
             // Lấy X từ Byte 1 và Byte 2
             raw_x = (int16_t)((data[2] << 8) | data[1]);
@@ -75,7 +75,7 @@ static void mouse_irq_callback(struct urb *urb) {
             // Lấy Con lăn (Wheel) từ Byte 5
             current_data[3] = data[5]; 
         } else {
-            // Dự phòng cho chuột văn phòng tiêu chuẩn
+            // Dự phòng cho chuột tiêu chuẩn
             current_data[1] = data[1];
             current_data[2] = data[2];
             if (len >= 4) current_data[3] = data[3];

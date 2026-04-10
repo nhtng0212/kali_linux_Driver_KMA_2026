@@ -156,6 +156,6 @@ module_init(cipher_init);
 module_exit(cipher_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Ban (Sinh vien xuat sac)");
+MODULE_AUTHOR("Tung Nguyen");
 MODULE_DESCRIPTION("Driver ma hoa chuyen vi kem Mutex bao ve");
 MODULE_VERSION("1.1");
